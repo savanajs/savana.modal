@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Savana Modal</title>
+ <meta name="description" content="">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+ <link rel="stylesheet" href="lib/css/animate.min.css">
+ <link rel="stylesheet" href="lib/css/savana.css">
+
+  <!--[if lt IE 9]>
+        <script src="../../lib/js/addEventListener-IE.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+  
+  <script src="lib/js/savana.js"></script> 
+  <script src="lib/js/savana.modal.js"></script> 
+  <link rel="stylesheet" href="lib/css/savana.modal.css">
+
+  <script>
+
+    $savana(document).done(function(e){
+
+        // Launcher plugin
+        var modal = $savana("body").modal();
+
+        // HTML plugin loader
+        var modalTeste = modal.modalLoad(".modal-test");
+        var modalTeste2 = modal.modalLoad(".modal-test2");
+
+        // Leave the modal opens by default when the page loads
+        modal.modalOpen(modalTeste2);
+        
+    });
+
+  </script>
+ </head>
+
+ <body style="background: #ccc">
+<p>To better see this method open the source code and the browser console</p>
+
+  <!-- // HTML Modal -->
+  <!-- The class "sjs-modal-hide, sjs-modal-content and sjs-modal-open is required" -->
+
+  <div class="sjs-modal-hide modal-test">
+    <div class="sjs-modal-content">
+      Content test 1
+    </div>
+  </div>
+
+  <div class="sjs-modal-hide modal-test2">
+    <div class="sjs-modal-content">
+      Content test 2
+    </div>
+  </div>
+  <!-- // HTML Modal -->
+
+  <!-- // Modal open click -->
+  <!-- rel is the class of modal html -->
+  <p><a href="#" class="sjs-modal-open" rel=".modal-test" title="">Modal test 1</a></p>
+  <p><a href="#" class="sjs-modal-open" rel=".modal-test2" title="">Modal test 2</a></p>
+  <!-- // Modal open click -->
+
+</body>
+</html>
